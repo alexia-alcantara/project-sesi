@@ -1,0 +1,23 @@
+p{
+    color: rgba(0, 67, 130, 1);
+    font-family: Helvetica;
+    font-weight: 600;
+}
+
+.otp-area{
+    width: 70%;
+    margin: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.otp-area input{
+    width: 50px;
+    padding: 10px;
+    outline: none;
+    text-align: center;
+}
+
+.otp-area input:focus{
+    border: 2px solid #0000;
+}
