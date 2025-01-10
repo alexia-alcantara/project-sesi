@@ -1,3 +1,8 @@
+
+.login-container{
+    min-height: 75vh;
+  }
+
 p{
     color: rgba(0, 67, 130, 1);
     font-family: Helvetica;

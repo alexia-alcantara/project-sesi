@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useForm, FieldValues } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { withMask } from 'use-mask-input';
+import './RegisterTeacher.css'
 
 const RegisterTeacher = () => {
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -11,13 +12,13 @@ const RegisterTeacher = () => {
     console.log(errors);
 
   return (
-    <div className="login-container flex flex-row min-h-screen h-full">
+    <div className="login-container flex flex-row h-full">
     <div className='box-left flex justify-center relative overflow-hidden flex-1'>
          <div className="login-overlay relative w-full text-center">
            <img
                src={require("../../assets/imagem-sobrepor.png")}
                alt="Menina sorrindo"
-               className="login-image flex w-full relative z-1 h-full object-cover"
+               className="login-image flex w-full relative z-1 h-full object-fill"
            />
          </div>
          
@@ -44,9 +45,9 @@ const RegisterTeacher = () => {
                     placeholder="Digite seu nome completo" 
                      />
                      {/* Sugestão de exibir erro de validação */}
-                     <div className='min-h-4'>
+                     {/* <div className='min-h-4'>
                         <p className='text-xs text-red-400 mt-1'> {errors.name?.message}</p>
-                     </div>
+                     </div> */}
                 </div>
 
                 <div className='form-group'>

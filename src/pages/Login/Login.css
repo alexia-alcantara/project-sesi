@@ -1,8 +1,8 @@
 
-
-.box-left {
-    width: calc(50% + 95px);
+.login-container{
+  min-height: 75vh;
 }
+
   
 .box-right {
     width: calc(50% + 190px);

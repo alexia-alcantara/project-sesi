@@ -16,13 +16,13 @@ function handleChange(e, index){
 }
     
     return (
-    <div className="login-container flex flex-row min-h-screen h-full">
+    <div className="login-container flex flex-row h-full">
        <div className='box-left flex justify-center relative overflow-hidden flex-1'>
             <div className="login-overlay relative w-full text-center">
               <img
                   src={require("../../assets/imagem-sobrepor.png")}
                   alt="Menina sorrindo"
-                  className="login-image flex w-full relative z-1 h-full object-cover"
+                  className="login-image flex w-full relative z-1 h-full object-fill"
               />
             </div>
             
