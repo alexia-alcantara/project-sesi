@@ -1,12 +1,15 @@
 import React from "react";
-import Login from "./components/Login/Login";
+import Login from "./pages/Login/Login";
 import Footer from "./components/Footer/Footer";
+import AppRoutes from "./routes";
 
 function App() {
   return (
     <div className="flex flex-col">
-      <Login />
-      <Footer/>
+      <AppRoutes/>
+      <Footer/> 
+      {/* <Login />
+      <Footer/> */}
     </div>
   );
 }
