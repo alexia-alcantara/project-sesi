@@ -3,13 +3,37 @@ import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { withMask } from 'use-mask-input';
 import './RegisterTeacher.css'
+import { useNavigate } from 'react-router-dom';
 
+
+import Modal from 'react-modal';
+
+const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+    },
+  };
 const RegisterTeacher = () => {
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-
     const { handleSubmit, register, getValues, formState: { isSubmitting, errors}} = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = (data) =>{
+        console.log(data);
+        setModalIsOpen(true);
+    }
+
+    const handleCloseModal = () => {
+        setModalIsOpen(false);
+        navigate('/login');
+      };
+        
     console.log(errors);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const navigate = useNavigate();
 
   return (
     <div className="login-container flex flex-row h-full">
@@ -156,6 +180,22 @@ const RegisterTeacher = () => {
      </div>
       
      </div>
+
+     {/* Modal de confirmação */}
+     <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setModalIsOpen(false)}
+        contentLabel="Confirmação"
+        style={customStyles}
+        ariaHideApp={false} 
+      >
+        <div className="modal-content">
+          <h2>Cadastro Concluído!</h2>
+          <p>Conta criada com sucesso!</p>
+          <button onClick={handleCloseModal}>Fechar</button>
+        </div>
+      </Modal>
+      
  </div>
   )
 }
