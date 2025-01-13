@@ -20,7 +20,7 @@ const customStyles = {
   };
 const RegisterTeacher = () => {
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-    const { handleSubmit, register, getValues, formState: { isSubmitting, errors}} = useForm();
+    const { handleSubmit, register, getValues, formState: { errors}} = useForm();
     const onSubmit = (data) =>{
         console.log(data);
         setModalIsOpen(true);
