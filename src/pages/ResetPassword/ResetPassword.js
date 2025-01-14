@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom';
 import './ResetPassword.css';
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash, FaInfoCircle } from 'react-icons/fa';
@@ -8,6 +8,11 @@ import Typography from '@mui/material/Typography';
 
 
 const ResetPassword = () => {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate('/login'); 
+  };
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [step, setStep] = useState(1); 
   const {
@@ -53,7 +58,7 @@ const ResetPassword = () => {
   }
 
   return (
-    <div className="login-container flex flex-row h-full">
+    <div className="login-container lg:flex lg:flex-row h-full">
       <div className="box-left flex justify-center relative overflow-hidden flex-1">
         <div className="login-overlay relative w-full text-center">
           <img
@@ -85,13 +90,12 @@ const ResetPassword = () => {
                 </div>
 
                 <div className="flex justify-between gap-5 mt-5">
-                <button type="submit" className="button-back w-full">
-
-                    Voltar
-                  </button>
-                  <button type="submit" className="login-button">
-                    Enviar
-                  </button>
+                    <button type="submit" className="button-back w-full" onClick={handleBack}>
+                        Voltar
+                    </button>
+                    <button type="submit" className="login-button">
+                        Enviar
+                    </button>
                 </div>
               </>
             )}

@@ -4,7 +4,7 @@ import AppRoutes from "./routes";
 import './index.css'
 function App() {
   return (
-    <div className="flex flex-col">
+    <div className="lg:flex-1">
       <AppRoutes/>
       <Footer/> 
       {/* <Login />

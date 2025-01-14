@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
-    <div className="login-container flex flex-row h-full">
+    <div className="login-container lg:flex lg:flex-row h-full">
        <div className='box-left flex justify-center relative overflow-hidden flex-1'>
             <div className="login-overlay relative w-full text-center">
               <img
@@ -18,7 +18,7 @@ const Login = () => {
             </div>
        </div>
 
-       <div className='box-right flex flex-col justify-center items-center p-5 -ml-48'>
+       <div className='box-right lg:flex lg:flex-col justify-center items-center p-5'>
         <div className='login-form'>
             <img src={require("../../assets/sesi.png")}
                 alt="Editora SESI MINAS"

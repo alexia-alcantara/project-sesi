@@ -7,6 +7,14 @@
 .box-right {
     width: calc(50% + 190px);
     background-color: #75c1df;
+    margin-left: -12rem;
+}
+
+@media (max-width: 640px){
+  .box-right{
+    margin-left: 0;
+    width: 100%;
+  }
 }
   
   .login-overlay-image {
@@ -37,6 +45,12 @@
   .login-form {
     width: 80%;
     max-width: 400px;
+  }
+
+  @media (max-width: 640px){
+    .login-form{
+      width: 100%;
+    }
   }
   
   .login-form h1 {
