@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: 'Gibson Regular';
+    src: url('./assets/fonts/Gibson-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Gibson Bold';
+    src: url('./assets/fonts/Gibson-SemiBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Gibson Regular Italic';
+    src: url('./assets/fonts/Gibson-LightItalic.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+  }
+
+
+  /* Defina como fonte padrão do corpo */
+  body {
+    font-family: 'MinhaFonte', sans-serif;
+  }
+
+  .login-form h1{
+    font-family: Gibson Bold;
+  }
+
+  label{
+    font-family: Gibson Regular;
+  }

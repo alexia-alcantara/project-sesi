@@ -1,11 +1,10 @@
 import React from "react";
-import Login from "./pages/Login/Login";
 import Footer from "./components/Footer/Footer";
 import AppRoutes from "./routes";
-
+import './index.css'
 function App() {
   return (
-    <div className="flex flex-col">
+    <div className="lg:flex-1">
       <AppRoutes/>
       <Footer/> 
       {/* <Login />
